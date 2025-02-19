@@ -141,7 +141,7 @@ void SimulateMIDIEvents() {
 }
 
 int main() {
-    std::cout << "initializing RDTSC Input Scheduler (MIDI++ core)...\n";
+    std::cout << "initializing RDTSC Input Scheduler...\n";
     InitializeTimingAndCalibrations();
 
     unsigned __int64 initDelay = 1000000ULL; // 1 ms
