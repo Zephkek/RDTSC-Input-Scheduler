@@ -73,7 +73,7 @@ This is a submodule of MIDI++, which schedules note events for the auto-player v
 ## Example Output
 
 ```
-Initializing RDTSC Input Scheduler (MIDI++ core)...
+Initializing RDTSC Input Scheduler...
 
 === Timing Calibration Results ===
 Parameter                          Value
