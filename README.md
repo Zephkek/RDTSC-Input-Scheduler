@@ -108,6 +108,8 @@ Event simulation complete.
 - **High CPU Usage:**  
   Remember, the busy-wait approach occupies one CPU core completely during its delay. For less critical timing, consider mixing in a sleep period (hybrid sleep approach). 
 
+Future work: Add support for machines that only support rdtsc and not rdtscp.
+
 ---
 
 
