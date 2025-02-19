@@ -1,8 +1,9 @@
 //
 // Mohamed Maatallah <hotelsmaatallahrecemail@gmail.com>
 // Tue Feb 18 2025
-// RDTSCInputScheduler.cpp - Demo for RDTSC Input Scheduler 
+// RDTSCInputScheduler.cpp - Demo for RDTSC Input Scheduler
 
+#define NOMINMAX
 #include <windows.h>
 #include <intrin.h>
 #include <cstdio>
@@ -140,7 +141,7 @@ void SimulateMIDIEvents() {
 }
 
 int main() {
-    std::cout << "initializing RDTSC Input Scheduler...\n";
+    std::cout << "initializing RDTSC Input Scheduler (MIDI++ core)...\n";
     InitializeTimingAndCalibrations();
 
     unsigned __int64 initDelay = 1000000ULL; // 1 ms
@@ -154,6 +155,10 @@ int main() {
         << " ns, error " << std::fixed << std::setprecision(2) << initError << "%\n\n";
 
     SimulateMIDIEvents();
+
+    std::cout << "\nPress Enter to exit...";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
 
     return 0;
 }
