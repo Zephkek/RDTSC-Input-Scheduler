@@ -18,9 +18,11 @@ static unsigned __int64 calibrateSyscallOverheadBatched() {
     const int bs = 10, its = 50;
     unsigned __int64 tot = 0;
     for (int i = 0; i < its; i++) {
+        _mm_mfence(); 
         unsigned __int64 s = __rdtsc();
         for (int b = 0; b < bs; b++)
             SendInput(0, nullptr, 0);
+        _mm_mfence(); 
         unsigned __int64 e = __rdtsc();
         tot += (e - s);
     }
