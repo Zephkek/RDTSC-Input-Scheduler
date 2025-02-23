@@ -5,8 +5,6 @@
 ; calculates: delay_cycles = (ns * cyclesPerNs) - (syscallOverhead + jitter)
 ; busy-waits until current tsc >= target tsc.
 
-includelib kernel32.lib
-
 EXTERN gCyclesPerNanosecond:QWORD
 EXTERN gSyscallOverheadCycles:QWORD
 EXTERN gJitterCompensationCycles:QWORD
