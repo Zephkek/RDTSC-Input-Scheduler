@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a submodule of MIDI++, which schedules note events for the auto-player via the RDTSCP instruction, it uses busy wait for exact number of nanoseconds while compensating for overhead and jitter caused by high-level api's like SendInput with near nanosecond accuracy. Note that this is still subject to OS thread prempting so error rates may vary from system to system.
+This is a submodule which schedules note events for the auto-player via the RDTSCP instruction, it uses busy wait for exact number of nanoseconds while compensating for overhead and jitter caused by high-level api's like SendInput with near nanosecond accuracy. Note that this is still subject to OS thread prempting so error rates may vary from system to system.
 
 ---
 
